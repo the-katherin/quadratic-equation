@@ -27,8 +27,10 @@ module.exports = function solveEquation(equation) {
     result = [x1, x2];
     }
   else result = 0;
-  var sortResult = result.sort();
-  return sortResult;
+  result.sort(function(s, z) {
+  return s - z;
+});
+  return result;
 
 
 }
