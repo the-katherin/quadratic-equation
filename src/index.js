@@ -17,12 +17,12 @@ module.exports = function solveEquation(equation) {
   var discr = b*b-4*a*c;
 
   if (discr>0) {
-    x1 = ((-b) + Math.sqrt(discr)) / (2*a);
-    x2 = ((-b) - Math.sqrt(discr)) / (2*a);
+    x1 = Math.round(((-b) + Math.sqrt(discr)) / (2*a));
+    x2 = Math.round(((-b) - Math.sqrt(discr)) / (2*a));
     result = [x1, x2];
     }
   else if (discr === 0) {
-    x1= (-b)/(2*a);
+    x1 = Math.round((-b)/(2*a));
     x2=x1;
     result = [x1, x2];
     }
